@@ -17,7 +17,7 @@ router.get("/:id",(req,res)=>{
     console.log(username)
 
     const u = userObj.filter(u=>{
-        return u.firstName===username
+        return u.id===username
     })[0];
      return res.status(500).json({message:"Users retrieved",success:"true",data:u});
 });
